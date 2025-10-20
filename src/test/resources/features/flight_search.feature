@@ -1,10 +1,10 @@
-@smoke
+@all
 Feature: Search Flights and Proceed To Payment Test Cases
 
   Background:
     Given User navigates to homepage and verify the logo
 
-  @tc_01
+  @tc_01 @specified
   Scenario: Basic Flight Search and Time Filter
   Verify flight search functionality with time filtering
     Then User verifies page title is "ENUYGUN Türkiye'nin Seyahat Sitesi - Uçak Bileti, Otobüs, Otel"
@@ -18,7 +18,7 @@ Feature: Search Flights and Proceed To Payment Test Cases
     Then Verify all flight departure times are within the selected range
 
 
-  @tc_02
+  @tc_02 @specified
   Scenario: Price Sorting for Turkish Airlines
   Validate price sorting functionality for specific airline
     Then User verifies page title is "ENUYGUN Türkiye'nin Seyahat Sitesi - Uçak Bileti, Otobüs, Otel"

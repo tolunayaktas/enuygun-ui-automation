@@ -1,5 +1,6 @@
 package enuygun.pages;
 
+import org.junit.Assert;
 import enuygun.driver.BaseDriver;
 import enuygun.utils.ConfigReader;
 import org.openqa.selenium.By;
@@ -7,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.List;
@@ -65,7 +65,7 @@ public abstract class BasePage {
                 break;
             }
         }
-        Assert.assertTrue(check, "'" + text + "' text not found in all elements!");
+        Assert.assertTrue("'" + text + "' text not found in all elements!", check);
     }
 
     protected void waitFor(int seconds) {

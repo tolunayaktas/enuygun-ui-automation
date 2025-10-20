@@ -1,11 +1,11 @@
 package enuygun.pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
 import java.util.List;
 
@@ -53,7 +53,7 @@ public class HomePage extends BasePage {
 
     public HomePage checkTheTitle(String expectedTitle) {
         String actualTitle = getTitle();
-        Assert.assertEquals(actualTitle, expectedTitle);
+        Assert.assertEquals(expectedTitle, actualTitle);
         return this;
     }
 
@@ -209,13 +209,13 @@ public class HomePage extends BasePage {
 
     private void verifyDepartureTimesInRange() {
         List<WebElement> times = driver.findElements(departureTimes);
-        Assert.assertTrue(times.size() > 0, "No flight times found");
+        Assert.assertTrue("No flight times found", times.size() > 0);
 
         for (WebElement timeElement : times) {
             String timeText = timeElement.getText().trim();
             int departureHour = Integer.parseInt(timeText.split(":")[0]);
             boolean isInRange = departureHour >= startHour && departureHour <= endHour;
-            Assert.assertTrue(isInRange, "Time " + timeText + " is out of range");
+            Assert.assertTrue("Time " + timeText + " is out of range", isInRange);
         }
     }
 
