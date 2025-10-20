@@ -1,5 +1,3 @@
-# enuygun-ui-automation
-
 # Enuygun Flight Search UI Automation
 
 Automated testing framework for Enuygun.com user-interface functionalities using Selenium WebDriver, Java, and Cucumber BDD.
