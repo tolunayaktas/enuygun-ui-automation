@@ -1,0 +1,26 @@
+# === Build Artifacts ===
+target/
+
+# === IDE Files ===
+.idea/
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.settings/
+.vscode/
+*.swp
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
+
+# === Maven ===
+dependency-reduced-pom.xml
+
+# === Test Output ===
+test-output/
+
+# === Logs ===
+*.log
